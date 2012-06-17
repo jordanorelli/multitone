@@ -4,40 +4,50 @@ class OscController implements the receiving end of a physical OSC controller,
 ____________________________________________________________________*/
 class XYVoice
 {
-    OscRecv _recv;
-    int _id;
+    OscRecv recv;
+    int id;
     string path;
-    SqrOsc osc => ADSR env => Pan2 pan => dac;
+    SqrOsc osc => ADSR env => NRev rev => Pan2 pan => dac;
     float minFreq;
     float maxFreq;
 
     110 => minFreq;
     1760 => maxFreq;
+    0.2 => rev.mix;
 
     env.keyOff();
     env.set(4::ms, 10::ms, 0.2, 10::ms);
     0.5 => pan.pan;
 
-    fun void init(OscRecv recv, int id) {
-        recv @=> _recv;
-        id => _id;
+    fun void init(OscRecv in, int x) {
+        in @=> recv;
+        x => id;
         "/multixy/" + id => path;
         spork ~ listen();
     }
 
     fun void listen() {
         <<< "listening on " + path >>>;
-        _recv.event(path, "ff") @=> OscEvent @ e;
+        recv.event(path, "ff") @=> OscEvent @ e;
         float x;
         float y;
+        OscSend out;
+        out.setHost("localhost", 9001);
+
         while(true) {
             e => now;
             while(e.nextMsg()) {
-                e.getFloat() => x;
                 e.getFloat() => y;
+                e.getFloat() => x;
             }
-            (y * 2) - 1 => pan.pan;
-            abs(x) => osc.freq;
+
+            x => out.addFloat;
+            y => out.addFloat;
+            out.startMsg("/voice/" + id, "ff");
+            <<< "SEND", "/voice/" + id, x, y >>>;
+
+            (x * 2) - 1 => pan.pan;
+            abs(y) => osc.freq;
             env.keyOn();
             20::ms => now;
             env.keyOff();
@@ -57,19 +67,19 @@ class XYVoice
 
 class Sustain
 {
-    OscRecv @ _recv;
+    OscRecv @ recv;
     string path;
     int isDown;
 
-    fun void init(OscRecv @ recv, string p) {
-        recv @=> _recv;
+    fun void init(OscRecv @ in, string p) {
+        in @=> recv;
         p => path;
         spork ~ listen();
     }
 
     fun void listen() {
         <<< "listening on " + path >>>;
-        _recv.event(path, "i") @=> OscEvent @ e;
+        recv.event(path, "i") @=> OscEvent @ e;
         while(true) {
             e => now;
             while(e.nextMsg()) {
