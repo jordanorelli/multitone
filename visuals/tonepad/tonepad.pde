@@ -20,6 +20,7 @@ void setup() {
  * run
  *____________________________________________________________________________*/
 void draw() {
+  noCursor();
   background(0);
   oscHandler.draw();
   console.draw();

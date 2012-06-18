@@ -5,6 +5,7 @@ class Tick
 {
   float x;
   float y;
+  float d;
   int age;
 
   Tick(float x, float y) {
@@ -14,15 +15,16 @@ class Tick
 
   void draw() {
     noFill();
-    stroke(255);
+    stroke(255, map(this.age, 0, 15, 255, 0));
+    // stroke(255);
     strokeWeight(4);
-    println(this.x + this.y + this.age + this.age);
-    ellipse(this.x, this.y, this.age * 10, this.age * 10);
+    this.d = this.age * 15;
+    ellipse(this.x, this.y, this.d, this.d);
     this.age++;
   }
 
   boolean dead() {
-    return this.age >= 10;
+    return this.age >= 15;
   }
 }
 
