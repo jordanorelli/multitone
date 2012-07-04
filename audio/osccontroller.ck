@@ -5,52 +5,73 @@ ____________________________________________________________________*/
 class XYVoice
 {
     OscRecv recv;
+    OscSend out;
     int id;
     string path;
     SinOsc osc => ADSR env => NRev rev => Pan2 pan => dac;
     float minFreq;
     float maxFreq;
+    time lastUpdated;
+    float x;
+    float y;
+    dur beat;
 
     110 => minFreq;
     1760 => maxFreq;
     0.08 => rev.mix;
 
     env.keyOff();
-    env.set(4::ms, 10::ms, 0.2, 10::ms);
+    env.set(20::ms, 10::ms, 0.6, 10::ms);
     0.5 => pan.pan;
 
-    fun void init(OscRecv in, int x) {
+    fun void init(OscRecv in, int _id) {
         in @=> recv;
-        x => id;
-        "/multixy/" + id => path;
+        _id => id;
+        100::ms => beat;
+        "/multixy/" + _id => path;
+        now => lastUpdated;
+        out.setHost("localhost", 9001);
         spork ~ listen();
+        spork ~ play();
     }
 
+    // function play is responsible for playing audio notes and sending
+    // relevant OSC data to the front end.
+    fun void play() {
+        beat - (now % beat) => now;
+        while(true) {
+            // if we've been updated sometime after the last note was played, play another note.
+            if(now - lastUpdated < beat) {
+                playNote();
+            }
+            beat - (now % beat) => now;
+        }
+    }
+
+    fun void playNote() {
+        (x * 2) - 1 => pan.pan;
+        abs(y) => osc.freq;
+        env.keyOn();
+        beat * 0.2 => now;
+        env.keyOff();
+        x => out.addFloat;
+        y => out.addFloat;
+        out.startMsg("/voice/" + id, "ff");
+        <<< "SEND", "/voice/" + id, x, y >>>;
+    }
+
+    // function listen is responsible for listening for incoming OSC messages
+    // and updating the state information for the current voice.
     fun void listen() {
         <<< "listening on " + path >>>;
         recv.event(path, "ff") @=> OscEvent @ e;
-        float x;
-        float y;
-        OscSend out;
-        out.setHost("localhost", 9001);
-
         while(true) {
             e => now;
             while(e.nextMsg()) {
                 e.getFloat() => y;
                 e.getFloat() => x;
+                now => lastUpdated;
             }
-
-            x => out.addFloat;
-            y => out.addFloat;
-            out.startMsg("/voice/" + id, "ff");
-            <<< "SEND", "/voice/" + id, x, y >>>;
-
-            (x * 2) - 1 => pan.pan;
-            abs(y) => osc.freq;
-            env.keyOn();
-            2::ms => now;
-            env.keyOff();
         }
     }
 
