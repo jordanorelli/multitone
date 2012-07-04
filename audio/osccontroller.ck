@@ -67,6 +67,7 @@ class XYVoice
     Osc @ osc;
     ADSR env => NRev rev => Pan2 pan => dac;
     time lastUpdated;
+    int waveType;
     float x;
     float y;
     dur beat;
@@ -78,6 +79,7 @@ class XYVoice
     0.5 => pan.pan;
 
     fun void init(OscRecv in, int _id) {
+        1 => waveType;
         new SinOsc @=> osc => env;;
         0.6 => osc.gain;
         in @=> recv;
@@ -112,7 +114,8 @@ class XYVoice
         x => out.addFloat;
         y => out.addFloat;
         rev.mix() => out.addFloat;
-        out.startMsg("/voice/" + id, "fff");
+        waveType => out.addInt;
+        out.startMsg("/voice/" + id, "fffi");
         <<< "SEND", "/voice/" + id, x, y >>>;
     }
 
@@ -133,19 +136,23 @@ class XYVoice
         }
     }
 
-    fun void setWaveType(string waveType) {
-        <<< "setWaveType " + waveType >>>;
-        if(waveType == "sin") {
+    fun void setWaveType(int _waveType) {
+        _waveType => waveType;
+        if(waveType == 1) {
             osc =< env;
+            <<< "SIN" >>>;
             new SinOsc @=> osc => env;
-        } else if(waveType == "sqr") {
+        } else if(waveType == 2) {
             osc =< env;
+            <<< "SQR" >>>;
             new SqrOsc @=> osc => env;
-        } else if(waveType == "saw") {
+        } else if(waveType == 4) {
             osc =< env;
+            <<< "SAW" >>>;
             new SawOsc @=> osc => env;
-        } else if(waveType == "tri") {
+        } else if(waveType == 3) {
             osc =< env;
+            <<< "TRI" >>>;
             new TriOsc @=> osc => env;
         }
     }
@@ -202,10 +209,10 @@ public class OscController
         sustain.init(recv, "/sustain");
 
         spork ~ reverbListener();
-        spork ~ waveToggle(1, "sin");
-        spork ~ waveToggle(2, "sqr");
-        spork ~ waveToggle(3, "tri");
-        spork ~ waveToggle(4, "saw");
+        spork ~ waveToggle(1);
+        spork ~ waveToggle(2);
+        spork ~ waveToggle(3);
+        spork ~ waveToggle(4);
     }
 
     fun void reverbListener() {
@@ -224,7 +231,7 @@ public class OscController
         }
     }
 
-    fun void waveToggle(int id, string waveType) {
+    fun void waveToggle(int id) {
         "/waveToggle/1/" + id => string path;
         <<< "listening on " + path >>>;
         float f;
@@ -237,7 +244,7 @@ public class OscController
             if (f == 1.0) {
                 <<< "RECV", path, f >>>;
                 for(0 => int i; i < voices.cap(); i++) {
-                    voices[i].setWaveType(waveType);
+                    voices[i].setWaveType(id);
                 }
             }
         }

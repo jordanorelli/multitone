@@ -6,23 +6,94 @@ class Tick
   float x;
   float y;
   float d;
+  float theta;
+  int waveType;
   int age;
   int maxAge;
 
-  Tick(float x, float y, float rev) {
+  Tick(float x, float y, float rev, int waveType) {
+    this.theta = random(TWO_PI);
     this.x = x;
     this.y = y;
     this.maxAge = (int)lerp(10, 40, rev);
+    this.waveType = waveType;
   }
 
   void draw() {
+    switch(this.waveType) {
+      case 1: // sin
+        this.drawSin();
+        break;
+      case 2: // sqr
+        this.drawSqr();
+        break;
+      case 3: // tri
+        this.drawTri();
+        break;
+      case 4: // saw
+        this.drawSaw();
+        break;
+    }
+    this.age++;
+  }
+
+  void drawSin() {
     noFill();
     stroke(255, map(this.age, 0, this.maxAge, 255, 0));
-    // stroke(255);
     strokeWeight(this.age);
     this.d = this.age * this.maxAge;
     ellipse(this.x, this.y, this.d, this.d);
-    this.age++;
+  }
+
+  void drawSqr() {
+    noFill();
+    pushMatrix();
+    translate(this.x, this.y);
+    rotate(this.theta);
+    stroke(255, map(this.age, 0, this.maxAge, 255, 0));
+    strokeWeight(this.age);
+    this.d = this.age * this.maxAge;
+    rectMode(CENTER);
+    rect(0, 0, this.d, this.d);
+    popMatrix();
+  }
+
+  void drawSaw() {
+    this.d = this.age * this.maxAge;
+    stroke(255, map(this.age, 0, this.maxAge, 255, 0));
+    strokeWeight(this.age);
+    noFill();
+    pushMatrix();
+    translate(this.x, this.y);
+    rotate(this.theta);
+    beginShape();
+    vertex(1.5 * this.d, 0.5 * this.d);
+    vertex(1.5 * this.d, -1.5 * this.d);
+    vertex(0.5 * this.d, -1.5 * this.d);
+    vertex(0.5 * this.d, -0.5 * this.d);
+    vertex(-1.5 * this.d, -0.5 * this.d);
+    vertex(-1.5 * this.d, 1.5 * this.d);
+    vertex(-0.5 * this.d, 1.5 * this.d);
+    vertex(-0.5 * this.d, 0.5 * this.d);
+    endShape(CLOSE);
+    popMatrix();
+  }
+
+  void drawTri() {
+    this.d = this.age * this.maxAge;
+    noFill();
+    pushMatrix();
+    translate(this.x, this.y);
+    rotate(this.theta);
+    translate(0, 0.3 * this.d * sqrt(3));
+    stroke(255, map(this.age, 0, this.maxAge, 255, 0));
+    strokeWeight(this.age);
+    beginShape();
+    vertex(this.d, 0);
+    vertex(0, -this.d * sqrt(3));
+    vertex(-this.d, 0);
+    endShape(CLOSE);
+    popMatrix();
   }
 
   boolean dead() {
@@ -58,8 +129,8 @@ class Voice
     }
   }
 
-  void xy(float x, float y, float rev) {
-    Tick tick = new Tick(lerp(0, width, x), lerp(height, 0, y), rev);
+  void xy(float x, float y, float rev, int waveType) {
+    Tick tick = new Tick(lerp(0, width, x), lerp(height, 0, y), rev, waveType);
     futureTicks.add(tick);
     println("voice " + id + " received (" + x + ", " + y + ")");
   }
