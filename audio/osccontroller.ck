@@ -180,5 +180,23 @@ public class OscController
         new Sustain @=> sustain;
         <<< "adding sustain at ", "/sustain" >>>;
         sustain.init(recv, "/sustain");
+
+        spork ~ reverbListener();
+    }
+
+    fun void reverbListener() {
+        <<< "listening on /reverbMix" >>>;
+        recv.event("/reverbMix", "f") @=> OscEvent @ e;
+        float mix;
+        while(true) {
+            e => now;
+            while(e.nextMsg()) {
+                e.getFloat() => mix;
+            }
+            for(0 => int i; i < voices.cap(); i++) {
+                mix => voices[i].rev.mix;
+            }
+            <<< "MIX", mix >>>;
+        }
     }
 }
