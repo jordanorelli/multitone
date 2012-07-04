@@ -1,3 +1,12 @@
+fun float getFreq(float norm) {
+    Math.pow(2, 1.0/12.0) => float toneStep;
+    110.0 => float minFreq;
+    (Math.floor(norm * 48.0)) $ int => int i;
+    minFreq * Math.pow(toneStep, i) => float f;;
+    <<< "getFreq toneStep:", toneStep, "minFreq:", minFreq, "i:", i, "f:", f >>>;
+    return f;
+}
+
 /*____________________________________________________________________
 class OscController implements the receiving end of a physical OSC controller,
 (which, in this project, is TouchOSC.)
@@ -8,16 +17,12 @@ class XYVoice
     OscSend out;
     int id;
     string path;
-    SinOsc osc => ADSR env => NRev rev => Pan2 pan => dac;
-    float minFreq;
-    float maxFreq;
+    TriOsc osc => ADSR env => NRev rev => Pan2 pan => dac;
     time lastUpdated;
     float x;
     float y;
     dur beat;
 
-    110 => minFreq;
-    1760 => maxFreq;
     0.08 => rev.mix;
 
     env.keyOff();
@@ -25,6 +30,7 @@ class XYVoice
     0.5 => pan.pan;
 
     fun void init(OscRecv in, int _id) {
+        0.6 => osc.gain;
         in @=> recv;
         _id => id;
         100::ms => beat;
@@ -50,9 +56,10 @@ class XYVoice
 
     fun void playNote() {
         (x * 2) - 1 => pan.pan;
-        abs(y) => osc.freq;
+        //abs(y) => osc.freq;
+        getFreq(y) => osc.freq;
         env.keyOn();
-        beat * 0.2 => now;
+        beat * 0.4 => now;
         env.keyOff();
         x => out.addFloat;
         y => out.addFloat;
@@ -72,18 +79,23 @@ class XYVoice
                 e.getFloat() => x;
                 now => lastUpdated;
             }
+            <<< "RECV", x, y >>>;
         }
     }
 
+    /*
     fun float normFreq(float absFreq) {
         if(absFreq > maxFreq) return 1.0;
         if(absFreq < minFreq) return 0.0;
         return (absFreq - minFreq) / (maxFreq - minFreq);
     }
+    */
 
+    /*
     fun float abs(float norm) {
         return norm * (maxFreq - minFreq) + minFreq;
     }
+    */
 }
 
 class Sustain
