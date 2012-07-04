@@ -38,7 +38,7 @@ class PitchToggle
 
     fun void listen() {
         "/pitchtoggle/1/" + id => string path;
-        <<< "listening on" + path >>>;
+        <<< "listening on " + path >>>;
         float i;
         recv.event(path, "f") @=> OscEvent @ e;
         while(true) {
@@ -48,8 +48,8 @@ class PitchToggle
             }
             if (i == 1.0) {
                 id => toneMode;
+                <<< "RECV", path, i >>>;
             }
-            <<< "RECV", path, i >>>;
         }
 
     }
@@ -64,7 +64,8 @@ class XYVoice
     OscRecv recv;
     OscSend out;
     int id;
-    TriOsc osc => ADSR env => NRev rev => Pan2 pan => dac;
+    Osc @ osc;
+    ADSR env => NRev rev => Pan2 pan => dac;
     time lastUpdated;
     float x;
     float y;
@@ -77,6 +78,7 @@ class XYVoice
     0.5 => pan.pan;
 
     fun void init(OscRecv in, int _id) {
+        new SinOsc @=> osc => env;;
         0.6 => osc.gain;
         in @=> recv;
         _id => id;
@@ -128,6 +130,23 @@ class XYVoice
                 now => lastUpdated;
             }
             <<< "RECV", x, y >>>;
+        }
+    }
+
+    fun void setWaveType(string waveType) {
+        <<< "setWaveType " + waveType >>>;
+        if(waveType == "sin") {
+            osc =< env;
+            new SinOsc @=> osc => env;
+        } else if(waveType == "sqr") {
+            osc =< env;
+            new SqrOsc @=> osc => env;
+        } else if(waveType == "saw") {
+            osc =< env;
+            new SawOsc @=> osc => env;
+        } else if(waveType == "tri") {
+            osc =< env;
+            new TriOsc @=> osc => env;
         }
     }
 }
@@ -183,6 +202,10 @@ public class OscController
         sustain.init(recv, "/sustain");
 
         spork ~ reverbListener();
+        spork ~ waveToggle(1, "sin");
+        spork ~ waveToggle(2, "sqr");
+        spork ~ waveToggle(3, "tri");
+        spork ~ waveToggle(4, "saw");
     }
 
     fun void reverbListener() {
@@ -200,4 +223,24 @@ public class OscController
             <<< "MIX", mix >>>;
         }
     }
+
+    fun void waveToggle(int id, string waveType) {
+        "/waveToggle/1/" + id => string path;
+        <<< "listening on " + path >>>;
+        float f;
+        recv.event(path, "f") @=> OscEvent @ e;
+        while(true) {
+            e => now;
+            while(e.nextMsg()) {
+                e.getFloat() => f;
+            }
+            if (f == 1.0) {
+                <<< "RECV", path, f >>>;
+                for(0 => int i; i < voices.cap(); i++) {
+                    voices[i].setWaveType(waveType);
+                }
+            }
+        }
+    }
+
 }
