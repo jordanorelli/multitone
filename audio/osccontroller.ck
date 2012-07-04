@@ -1,10 +1,58 @@
+int toneMode;
+
 fun float getFreq(float norm) {
+    <<< "getFreq:", norm, toneMode >>>;
+    if (toneMode == 1) {
+        return getFreqChromatic(norm);
+    } else {
+        return getFreqPentatonic(norm);
+    }
+}
+
+fun float getFreqChromatic(float norm) {
     Math.pow(2, 1.0/12.0) => float toneStep;
     110.0 => float minFreq;
     (Math.floor(norm * 48.0)) $ int => int i;
     minFreq * Math.pow(toneStep, i) => float f;;
-    <<< "getFreq toneStep:", toneStep, "minFreq:", minFreq, "i:", i, "f:", f >>>;
     return f;
+}
+
+fun float getFreqPentatonic(float norm) {
+    Math.pow(2, 1.0/5.0) => float toneStep;
+    110.0 => float minFreq;
+    (Math.floor(norm * 20.0)) $ int => int i;
+    minFreq * Math.pow(toneStep, i) => float f;;
+    return f;
+}
+
+class PitchToggle
+{
+    OscRecv recv;
+    int id;
+
+    fun void init(OscRecv in, int _id) {
+        _id => id;
+        in @=> recv;
+        spork ~ listen();
+    }
+
+    fun void listen() {
+        "/pitchtoggle/1/" + id => string path;
+        <<< "listening on" + path >>>;
+        float i;
+        recv.event(path, "f") @=> OscEvent @ e;
+        while(true) {
+            e => now;
+            while(e.nextMsg()) {
+                e.getFloat() => i;
+            }
+            if (i == 1.0) {
+                id => toneMode;
+            }
+            <<< "RECV", path, i >>>;
+        }
+
+    }
 }
 
 /*____________________________________________________________________
@@ -16,17 +64,16 @@ class XYVoice
     OscRecv recv;
     OscSend out;
     int id;
-    string path;
     TriOsc osc => ADSR env => NRev rev => Pan2 pan => dac;
     time lastUpdated;
     float x;
     float y;
     dur beat;
 
-    0.08 => rev.mix;
+    0.28 => rev.mix;
 
     env.keyOff();
-    env.set(20::ms, 10::ms, 0.6, 10::ms);
+    env.set(20::ms, 40::ms, 0.6, 40::ms);
     0.5 => pan.pan;
 
     fun void init(OscRecv in, int _id) {
@@ -34,7 +81,6 @@ class XYVoice
         in @=> recv;
         _id => id;
         100::ms => beat;
-        "/multixy/" + _id => path;
         now => lastUpdated;
         out.setHost("localhost", 9001);
         spork ~ listen();
@@ -70,6 +116,7 @@ class XYVoice
     // function listen is responsible for listening for incoming OSC messages
     // and updating the state information for the current voice.
     fun void listen() {
+        "/multixy/" + id => string path;
         <<< "listening on " + path >>>;
         recv.event(path, "ff") @=> OscEvent @ e;
         while(true) {
@@ -82,20 +129,6 @@ class XYVoice
             <<< "RECV", x, y >>>;
         }
     }
-
-    /*
-    fun float normFreq(float absFreq) {
-        if(absFreq > maxFreq) return 1.0;
-        if(absFreq < minFreq) return 0.0;
-        return (absFreq - minFreq) / (maxFreq - minFreq);
-    }
-    */
-
-    /*
-    fun float abs(float norm) {
-        return norm * (maxFreq - minFreq) + minFreq;
-    }
-    */
 }
 
 class Sustain
@@ -128,6 +161,7 @@ public class OscController
     OscRecv @ recv;
     Sustain @ sustain;
     XYVoice @ voices[5];
+    PitchToggle @ pitchModes[2];
 
     fun void init(int port) {
         new OscRecv @=> recv;
@@ -136,6 +170,11 @@ public class OscController
         for(0 => int i; i < voices.cap(); i++) {
             new XYVoice @=> voices[i];
             voices[i].init(recv, i + 1);
+        }
+
+        for(0 => int i; i < pitchModes.cap(); i++) {
+            new PitchToggle @=> pitchModes[i];
+            pitchModes[i].init(recv, i + 1);
         }
 
         new Sustain @=> sustain;
