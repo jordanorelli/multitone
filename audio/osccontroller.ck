@@ -7,13 +7,13 @@ class XYVoice
     OscRecv recv;
     int id;
     string path;
-    SqrOsc osc => ADSR env => NRev rev => Pan2 pan => dac;
+    SinOsc osc => ADSR env => NRev rev => Pan2 pan => dac;
     float minFreq;
     float maxFreq;
 
     110 => minFreq;
     1760 => maxFreq;
-    0.2 => rev.mix;
+    0.08 => rev.mix;
 
     env.keyOff();
     env.set(4::ms, 10::ms, 0.2, 10::ms);
@@ -49,7 +49,7 @@ class XYVoice
             (x * 2) - 1 => pan.pan;
             abs(y) => osc.freq;
             env.keyOn();
-            20::ms => now;
+            2::ms => now;
             env.keyOff();
         }
     }
