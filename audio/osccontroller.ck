@@ -109,7 +109,8 @@ class XYVoice
         env.keyOff();
         x => out.addFloat;
         y => out.addFloat;
-        out.startMsg("/voice/" + id, "ff");
+        rev.mix() => out.addFloat;
+        out.startMsg("/voice/" + id, "fff");
         <<< "SEND", "/voice/" + id, x, y >>>;
     }
 

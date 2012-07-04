@@ -7,24 +7,26 @@ class Tick
   float y;
   float d;
   int age;
+  int maxAge;
 
-  Tick(float x, float y) {
+  Tick(float x, float y, float rev) {
     this.x = x;
     this.y = y;
+    this.maxAge = (int)lerp(10, 40, rev);
   }
 
   void draw() {
     noFill();
-    stroke(255, map(this.age, 0, 15, 255, 0));
+    stroke(255, map(this.age, 0, this.maxAge, 255, 0));
     // stroke(255);
-    strokeWeight(4);
-    this.d = this.age * 15;
+    strokeWeight(this.age);
+    this.d = this.age * this.maxAge;
     ellipse(this.x, this.y, this.d, this.d);
     this.age++;
   }
 
   boolean dead() {
-    return this.age >= 15;
+    return this.age >= this.maxAge;
   }
 }
 
@@ -56,8 +58,8 @@ class Voice
     }
   }
 
-  void xy(float x, float y) {
-    Tick tick = new Tick(lerp(0, width, x), lerp(height, 0, y));
+  void xy(float x, float y, float rev) {
+    Tick tick = new Tick(lerp(0, width, x), lerp(height, 0, y), rev);
     futureTicks.add(tick);
     println("voice " + id + " received (" + x + ", " + y + ")");
   }
