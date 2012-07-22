@@ -492,4 +492,5 @@ dependencies: \
   ../../../../../usr/local/cinder_0.8.4_mac/include/cinder/app/TouchEvent.h \
   /usr/local/cinder_0.8.4_mac/blocks/osc/include/OscListener.h \
   ../../../../../usr/local/cinder_0.8.4_mac/blocks/osc/include/OscMessage.h \
-  ../../../../../usr/local/cinder_0.8.4_mac/blocks/osc/include/OscArg.h
+  ../../../../../usr/local/cinder_0.8.4_mac/blocks/osc/include/OscArg.h \
+  /projects/multitone/visuals/cinder/xcode/note.h
