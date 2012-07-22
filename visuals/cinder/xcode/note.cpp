@@ -7,11 +7,22 @@
 //
 
 #include "note.h"
+#include "cinder/app/AppBasic.h"
 #include "cinder/gl/gl.h"
 #include "cinder/Color.h"
 #include <math.h>
 
 using namespace ci;
+using namespace ci::app;
+
+
+int Note::maxAge = 250;
+
+Note::Note() {
+    pos = Vec2f(0, 0);
+    age = 0;
+    inPool = true;
+}
 
 Note::Note(float x, float y) {
     pos = Vec2f(x, y);
@@ -20,6 +31,7 @@ Note::Note(float x, float y) {
 
 void Note::draw() {
     gl::color(ColorA8u(255, 0, 0, 255 * 0.75 * pow(1 - (this->age / 250.0), 1.3)));
+
     float maxRadius = 500.0;
     float maxAge = 250.0;
     float radius = maxRadius * pow(this->age / maxAge, 1.3) + 5.0;
@@ -39,9 +51,10 @@ void Note::draw() {
 }
 
 void Note::update() {
+    if(this->age >= 250) {
+        console() << "ok, it happened." << std::endl;
+        this->age = 0;
+        this->inPool = true;
+    }
     this->age++;
-}
-
-bool Note::alive() {
-    return this->age < 250;
 }

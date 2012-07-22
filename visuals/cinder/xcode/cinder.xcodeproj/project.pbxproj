@@ -15,6 +15,7 @@
 		00B784B60FF439BC000DE1D7 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B784B20FF439BC000DE1D7 /* CoreAudio.framework */; };
 		00BAE65A0E7ED9C10018A608 /* cinderApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00BAE6590E7ED9C10018A608 /* cinderApp.cpp */; };
 		00CCAF15116A9FEE008396D5 /* CinderApp.icns in Resources */ = {isa = PBXBuildFile; fileRef = 00CCAF14116A9FEE008396D5 /* CinderApp.icns */; };
+		514058BF15BBA67C00DF135C /* NotePool.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 514058BE15BBA67C00DF135C /* NotePool.cpp */; };
 		514C378115BB338600800773 /* note.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 514C378015BB338600800773 /* note.cpp */; };
 		5169722015BB2CB80075FDDC /* OscBundle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5169720B15BB2CB70075FDDC /* OscBundle.cpp */; };
 		5169722115BB2CB80075FDDC /* OscListener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5169720C15BB2CB70075FDDC /* OscListener.cpp */; };
@@ -40,6 +41,8 @@
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		32CA4F630368D1EE00C91783 /* cinder_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cinder_Prefix.pch; sourceTree = "<group>"; };
+		514058BD15BBA67200DF135C /* NotePool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotePool.h; sourceTree = "<group>"; };
+		514058BE15BBA67C00DF135C /* NotePool.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NotePool.cpp; sourceTree = "<group>"; };
 		514C378015BB338600800773 /* note.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = note.cpp; sourceTree = "<group>"; };
 		514C378B15BB34AE00800773 /* note.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = note.h; sourceTree = "<group>"; };
 		516971D015BB2CB70075FDDC /* IpEndpointName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IpEndpointName.h; sourceTree = "<group>"; };
@@ -97,6 +100,7 @@
 			children = (
 				00BAE6590E7ED9C10018A608 /* cinderApp.cpp */,
 				514C378015BB338600800773 /* note.cpp */,
+				514058BE15BBA67C00DF135C /* NotePool.cpp */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -154,6 +158,7 @@
 			children = (
 				32CA4F630368D1EE00C91783 /* cinder_Prefix.pch */,
 				514C378B15BB34AE00800773 /* note.h */,
+				514058BD15BBA67200DF135C /* NotePool.h */,
 			);
 			name = Headers;
 			sourceTree = "<group>";
@@ -313,6 +318,7 @@
 				5169722215BB2CB80075FDDC /* OscMessage.cpp in Sources */,
 				5169722315BB2CB80075FDDC /* OscSender.cpp in Sources */,
 				514C378115BB338600800773 /* note.cpp in Sources */,
+				514058BF15BBA67C00DF135C /* NotePool.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

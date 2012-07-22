@@ -12,13 +12,16 @@
 
 class Note {
 public:
+    static int maxAge;
+    Note();
     Note(float, float);
     void update();
     void draw();
-    bool alive();
 
     ci::Vec2f pos;
     int age;
+    bool inPool;
 };
+
 
 #endif

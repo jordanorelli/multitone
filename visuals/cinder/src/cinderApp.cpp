@@ -1,6 +1,7 @@
 #include "cinder/app/AppBasic.h"
 #include "cinder/gl/gl.h"
 #include "OscListener.h"
+#include "NotePool.h"
 #include "note.h"
 #include <list>
 
@@ -15,10 +16,8 @@ class cinderApp : public AppBasic {
 	void mouseDown( MouseEvent event );	
 	void update();
 	void draw();
-    void clearDead();
     osc::Listener listener;
-
-    std::list<Note> notes;
+    NotePool pool;
 };
 
 void cinderApp::prepareSettings(Settings *settings) {
@@ -37,38 +36,24 @@ void cinderApp::setup() {
 void cinderApp::mouseDown( MouseEvent event ) {
 }
 
-void cinderApp::update() {    
-    for(list<Note>::iterator i = notes.begin(); i != notes.end(); ++i) {
-        i->update();
-    }
+void cinderApp::update() {
+    pool.update();
 
-    this->clearDead();
-    
-    while(listener.hasWaitingMessages()) {
+    while(listener.hasWaitingMessages()) {        
         osc::Message msg;
         listener.getNextMessage(&msg);
-        float x = msg.getArgAsFloat(0) * app::getWindowWidth();
-        float y = (1.0 - msg.getArgAsFloat(1)) * app::getWindowHeight();
+        pool.getNote()->pos = Vec2f(
+                          msg.getArgAsFloat(0) * app::getWindowWidth(),
+                          (1.0 - msg.getArgAsFloat(1)) * app::getWindowHeight()
+        );
         float reverb = msg.getArgAsFloat(2);
         int waveform = msg.getArgAsInt32(3);
-        this->notes.push_back(Note(x, y));
     }
 }
 
 void cinderApp::draw() {
-	// clear out the window with black
 	gl::clear( Color( 0, 0, 0 ) ); 
-    for(list<Note>::iterator i = notes.begin(); i != notes.end(); ++i) {
-        i->draw();
-    }
-}
-
-void cinderApp::clearDead() {
-    for(list<Note>::iterator i = notes.begin(); i != notes.end(); ++i) {
-        if(!i->alive()) {
-            notes.erase(i);
-        }
-    }
+    pool.draw();
 }
 
 CINDER_APP_BASIC( cinderApp, RendererGl )
