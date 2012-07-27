@@ -33,8 +33,7 @@ void Note::init(float x, float y, float ageNorm) {
 }
 
 void Note::draw() {
-    //this->drawCircle();
-    this->drawTorus();
+    this->drawCircle();
 }
 
 void Note::drawCircle() {
@@ -45,16 +44,6 @@ void Note::drawCircle() {
     glScalef(radius, radius, 1);
     glDrawArrays( GL_LINE_LOOP, 0, NUM_SEGMENTS );
     glPopMatrix();   
-}
-
-void Note::drawTriangle() {
-}
-
-void Note::drawTorus() {
-    gl::pushMatrices();
-    gl::translate(this->pos);
-    gl::drawTorus(100.0, 200.0);
-    gl::popMatrices();
 }
 
 void Note::update() {
