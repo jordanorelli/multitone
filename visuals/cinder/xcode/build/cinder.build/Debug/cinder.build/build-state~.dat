@@ -1,334 +1,0 @@
-Tcinder
-v5
-r1
-cCheck dependencies
-cProcessInfoPlistFile /projects/multitone/visuals/cinder/xcode/./build/Debug/cinder.app/Contents/Info.plist Info.plist
-cCpResource CinderApp.icns ./build/Debug/cinder.app/Contents/Resources/CinderApp.icns
-cProcessPCH++ /var/folders/p_/cfdnrzbd7xg44sy7_j83w4sr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/cinder_Prefix-blqrhdehcgviepeobwtjlxsezvmk/cinder_Prefix.pch.pth cinder_Prefix.pch normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC ./build/cinder.build/Debug/cinder.build/Objects-normal/i386/note.o /projects/multitone/visuals/cinder/xcode/note.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC ./build/cinder.build/Debug/cinder.build/Objects-normal/i386/cinderApp.o /projects/multitone/visuals/cinder/xcode/../src/cinderApp.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC ./build/cinder.build/Debug/cinder.build/Objects-normal/i386/OscBundle.o /usr/local/cinder_0.8.4_mac/blocks/osc/src/OscBundle.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC ./build/cinder.build/Debug/cinder.build/Objects-normal/i386/OscListener.o /usr/local/cinder_0.8.4_mac/blocks/osc/src/OscListener.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC ./build/cinder.build/Debug/cinder.build/Objects-normal/i386/OscMessage.o /usr/local/cinder_0.8.4_mac/blocks/osc/src/OscMessage.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC ./build/cinder.build/Debug/cinder.build/Objects-normal/i386/OscSender.o /usr/local/cinder_0.8.4_mac/blocks/osc/src/OscSender.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cLd /projects/multitone/visuals/cinder/xcode/./build/Debug/cinder.app/Contents/MacOS/cinder normal i386
-cTouch /projects/multitone/visuals/cinder/xcode/./build/Debug/cinder.app
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.6.sdk
-c000000004F6920A400000000000000EE
-t1332289700
-s238
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Accelerate.framework/Accelerate
-c000000004F7620960000000000006500
-t1333141654
-s25856
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/AudioToolbox.framework/AudioToolbox
-c000000004F7620970000000000025E48
-t1333141655
-s155208
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/AudioUnit.framework/AudioUnit
-c000000004F7620970000000000005FA8
-t1333141655
-s24488
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Cocoa.framework/Headers/Cocoa.h
-c000000004F76209800000000000001E5
-t1333141656
-s485
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/CoreAudio.framework/CoreAudio
-c000000004F7620980000000000014894
-t1333141656
-s84116
-
-N/System/Library/Frameworks/Carbon.framework/Carbon
-c000000004F6B451B0000000000006530
-t1332430107
-s25904
-
-N/System/Library/Frameworks/Cocoa.framework/Cocoa
-c000000004F6B451B0000000000006560
-t1332430107
-s25952
-
-N/System/Library/Frameworks/CoreVideo.framework/CoreVideo
-c000000004FE68973000000000007CED0
-t1340508531
-s511696
-
-N/System/Library/Frameworks/OpenGL.framework/OpenGL
-c000000004FE68988000000000002E350
-t1340508552
-s189264
-
-N/System/Library/Frameworks/QTKit.framework/QTKit
-c000000004FE6899200000000004B7F60
-t1340508562
-s4947808
-
-N/System/Library/Frameworks/QuickTime.framework/QuickTime
-c000000004FE68992000000000032B7E0
-t1340508562
-s3323872
-
-N/projects/multitone/visuals/cinder/xcode/../src/cinderApp.cpp
-c00000000500B48580000000000000744
-t1342916696
-s1860
-
-N/projects/multitone/visuals/cinder/xcode/./build/Debug/cinder.app
-t2
-s0
-
-N/projects/multitone/visuals/cinder/xcode/./build/Debug/cinder.app/Contents/Info.plist
-t2
-s0
-
-N/projects/multitone/visuals/cinder/xcode/./build/Debug/cinder.app/Contents/MacOS/cinder
-t2
-s0
-
-N/projects/multitone/visuals/cinder/xcode/./build/Debug/cinder.app/Contents/PkgInfo
-t2
-s0
-
-N/projects/multitone/visuals/cinder/xcode/./build/Debug/cinder.app/Contents/Resources/CinderApp.icns
-t2
-s0
-
-N/projects/multitone/visuals/cinder/xcode/./build/cinder.build/Debug/cinder.build/Objects-normal/i386/OscBundle.o
-t2
-s0
-
-N/projects/multitone/visuals/cinder/xcode/./build/cinder.build/Debug/cinder.build/Objects-normal/i386/OscListener.o
-t2
-s0
-
-N/projects/multitone/visuals/cinder/xcode/./build/cinder.build/Debug/cinder.build/Objects-normal/i386/OscMessage.o
-t2
-s0
-
-N/projects/multitone/visuals/cinder/xcode/./build/cinder.build/Debug/cinder.build/Objects-normal/i386/OscSender.o
-t2
-s0
-
-N/projects/multitone/visuals/cinder/xcode/./build/cinder.build/Debug/cinder.build/Objects-normal/i386/cinder.LinkFileList
-c00000000500B4C5B00000000000002A4
-t1342917723
-s676
-
-N/projects/multitone/visuals/cinder/xcode/./build/cinder.build/Debug/cinder.build/Objects-normal/i386/cinderApp.o
-t2
-s0
-
-N/projects/multitone/visuals/cinder/xcode/./build/cinder.build/Debug/cinder.build/Objects-normal/i386/note.o
-t2
-s0
-
-N/projects/multitone/visuals/cinder/xcode/CinderApp.icns
-c00000000500AEC18000000000001BEB5
-t1342893080
-s114357
-
-N/projects/multitone/visuals/cinder/xcode/cinder_Prefix.pch
-c00000000500AEC180000000000000093
-t1342893080
-s147
-i<Cocoa/Cocoa.h>
-
-N/projects/multitone/visuals/cinder/xcode/note.cpp
-c00000000500B4BCB000000000000025B
-t1342917579
-s603
-
-N/usr/local/cinder_0.8.4_mac/blocks/osc/src/OscBundle.cpp
-c000000004FADAEF200000000000007E1
-t1336782578
-s2017
-
-N/usr/local/cinder_0.8.4_mac/blocks/osc/src/OscListener.cpp
-c000000004FADAEF200000000000016A1
-t1336782578
-s5793
-
-N/usr/local/cinder_0.8.4_mac/blocks/osc/src/OscMessage.cpp
-c000000004FADAEF200000000000010AD
-t1336782578
-s4269
-
-N/usr/local/cinder_0.8.4_mac/blocks/osc/src/OscSender.cpp
-c000000004FADAEF20000000000001059
-t1336782578
-s4185
-
-N/var/folders/p_/cfdnrzbd7xg44sy7_j83w4sr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/cinder_Prefix-blqrhdehcgviepeobwtjlxsezvmk/cinder_Prefix.pch.pth
-t2
-s0
-
-NInfo.plist
-c00000000500AEC18000000000000034C
-t1342893080
-s844
-
-CBuild AST from /projects/multitone/visuals/cinder/xcode/../src/cinderApp.cpp
-r0
-
-CBuild AST from /projects/multitone/visuals/cinder/xcode/note.cpp
-r0
-
-CBuild AST from /usr/local/cinder_0.8.4_mac/blocks/osc/src/OscBundle.cpp
-r0
-
-CBuild AST from /usr/local/cinder_0.8.4_mac/blocks/osc/src/OscListener.cpp
-r0
-
-CBuild AST from /usr/local/cinder_0.8.4_mac/blocks/osc/src/OscMessage.cpp
-r0
-
-CBuild AST from /usr/local/cinder_0.8.4_mac/blocks/osc/src/OscSender.cpp
-r0
-
-CCheck dependencies
-r0
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies4d30c8db83bbb541^1cebdadb83bbb541^---0#1#0#--18"Check dependencies36"7A2FBD97-1EE3-49B7-8B2E-C57F5151907C-
-
-CCompileC ./build/cinder.build/Debug/cinder.build/Objects-normal/i386/OscBundle.o /usr/local/cinder_0.8.4_mac/blocks/osc/src/OscBundle.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s364610531.077749
-e364610533.302031
-r1
-xCompileC
-x./build/cinder.build/Debug/cinder.build/Objects-normal/i386/OscBundle.o
-x/usr/local/cinder_0.8.4_mac/blocks/osc/src/OscBundle.cpp
-xnormal
-xi386
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection64"Compile /usr/local/cinder_0.8.4_mac/blocks/osc/src/OscBundle.cpp350b14e383bbb541^61554de583bbb541^---0#0#0#-19%DVTDocumentLocation2@72"file://localhost/usr/local/cinder_0.8.4_mac/blocks/osc/src/OscBundle.cpp0000000000000000^2696"CompileC ./build/cinder.build/Debug/cinder.build/Objects-normal/i386/OscBundle.o /usr/local/cinder_0.8.4_mac/blocks/osc/src/OscBundle.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /projects/multitone/visuals/cinder/xcode    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-sign-compare -Wno-shorten-64-to-32 -Wno-newline-eof -Wc++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.5 -g -Wno-conversion -Wno-sign-conversion -iquote /projects/multitone/visuals/cinder/xcode/./build/cinder.build/Debug/cinder.build/cinder-generated-files.hmap -I/projects/multitone/visuals/cinder/xcode/./build/cinder.build/Debug/cinder.build/cinder-own-target-headers.hmap -I/projects/multitone/visuals/cinder/xcode/./build/cinder.build/Debug/cinder.build/cinder-all-target-headers.hmap -iquote /projects/multitone/visuals/cinder/xcode/./build/cinder.build/Debug/cinder.build/cinder-project-headers.hmap -iquote../../../../../usr/local/cinder_0.8.4_mac/include -iquote../../../../../usr/local/cinder_0.8.4_mac/blocks/osc/include -I/projects/multitone/visuals/cinder/xcode/build/Debug/include -I../../../../../usr/local/cinder_0.8.4_mac/boost -I/projects/multitone/visuals/cinder/xcode/./build/cinder.build/Debug/cinder.build/DerivedSources/i386 -I/projects/multitone/visuals/cinder/xcode/./build/cinder.build/Debug/cinder.build/DerivedSources -F/projects/multitone/visuals/cinder/xcode/build/Debug -include /var/folders/p_/cfdnrzbd7xg44sy7_j83w4sr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/cinder_Prefix-blqrhdehcgviepeobwtjlxsezvmk/cinder_Prefix.pch -MMD -MT dependencies -MF /projects/multitone/visuals/cinder/xcode/./build/cinder.build/Debug/cinder.build/Objects-normal/i386/OscBundle.d --serialize-diagnostics /projects/multitone/visuals/cinder/xcode/./build/cinder.build/Debug/cinder.build/Objects-normal/i386/OscBundle.dia -c /usr/local/cinder_0.8.4_mac/blocks/osc/src/OscBundle.cpp -o /projects/multitone/visuals/cinder/xcode/./build/cinder.build/Debug/cinder.build/Objects-normal/i386/OscBundle.o36"502CEC45-8CF6-482C-B04A-F95F3E24C6F4-
-
-CCompileC ./build/cinder.build/Debug/cinder.build/Objects-normal/i386/OscListener.o /usr/local/cinder_0.8.4_mac/blocks/osc/src/OscListener.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s364610536.478885
-e364610549.064620
-r1
-xCompileC
-x./build/cinder.build/Debug/cinder.build/Objects-normal/i386/OscListener.o
-x/usr/local/cinder_0.8.4_mac/blocks/osc/src/OscListener.cpp
-xnormal
-xi386
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection66"Compile /usr/local/cinder_0.8.4_mac/blocks/osc/src/OscListener.cpp49ba7ae883bbb541^488a10f583bbb541^---0#0#0#-19%DVTDocumentLocation2@74"file://localhost/usr/local/cinder_0.8.4_mac/blocks/osc/src/OscListener.cpp0000000000000000^2708"CompileC ./build/cinder.build/Debug/cinder.build/Objects-normal/i386/OscListener.o /usr/local/cinder_0.8.4_mac/blocks/osc/src/OscListener.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /projects/multitone/visuals/cinder/xcode    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-sign-compare -Wno-shorten-64-to-32 -Wno-newline-eof -Wc++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.5 -g -Wno-conversion -Wno-sign-conversion -iquote /projects/multitone/visuals/cinder/xcode/./build/cinder.build/Debug/cinder.build/cinder-generated-files.hmap -I/projects/multitone/visuals/cinder/xcode/./build/cinder.build/Debug/cinder.build/cinder-own-target-headers.hmap -I/projects/multitone/visuals/cinder/xcode/./build/cinder.build/Debug/cinder.build/cinder-all-target-headers.hmap -iquote /projects/multitone/visuals/cinder/xcode/./build/cinder.build/Debug/cinder.build/cinder-project-headers.hmap -iquote../../../../../usr/local/cinder_0.8.4_mac/include -iquote../../../../../usr/local/cinder_0.8.4_mac/blocks/osc/include -I/projects/multitone/visuals/cinder/xcode/build/Debug/include -I../../../../../usr/local/cinder_0.8.4_mac/boost -I/projects/multitone/visuals/cinder/xcode/./build/cinder.build/Debug/cinder.build/DerivedSources/i386 -I/projects/multitone/visuals/cinder/xcode/./build/cinder.build/Debug/cinder.build/DerivedSources -F/projects/multitone/visuals/cinder/xcode/build/Debug -include /var/folders/p_/cfdnrzbd7xg44sy7_j83w4sr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/cinder_Prefix-blqrhdehcgviepeobwtjlxsezvmk/cinder_Prefix.pch -MMD -MT dependencies -MF /projects/multitone/visuals/cinder/xcode/./build/cinder.build/Debug/cinder.build/Objects-normal/i386/OscListener.d --serialize-diagnostics /projects/multitone/visuals/cinder/xcode/./build/cinder.build/Debug/cinder.build/Objects-normal/i386/OscListener.dia -c /usr/local/cinder_0.8.4_mac/blocks/osc/src/OscListener.cpp -o /projects/multitone/visuals/cinder/xcode/./build/cinder.build/Debug/cinder.build/Objects-normal/i386/OscListener.o36"01024257-554B-4517-9C8D-C61C9759DAD6-
-
-CCompileC ./build/cinder.build/Debug/cinder.build/Objects-normal/i386/OscMessage.o /usr/local/cinder_0.8.4_mac/blocks/osc/src/OscMessage.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s364610536.479112
-e364610538.763701
-r1
-xCompileC
-x./build/cinder.build/Debug/cinder.build/Objects-normal/i386/OscMessage.o
-x/usr/local/cinder_0.8.4_mac/blocks/osc/src/OscMessage.cpp
-xnormal
-xi386
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection65"Compile /usr/local/cinder_0.8.4_mac/blocks/osc/src/OscMessage.cpp32c77ae883bbb541^9a93c3ea83bbb541^---0#0#0#-19%DVTDocumentLocation2@73"file://localhost/usr/local/cinder_0.8.4_mac/blocks/osc/src/OscMessage.cpp0000000000000000^2702"CompileC ./build/cinder.build/Debug/cinder.build/Objects-normal/i386/OscMessage.o /usr/local/cinder_0.8.4_mac/blocks/osc/src/OscMessage.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /projects/multitone/visuals/cinder/xcode    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-sign-compare -Wno-shorten-64-to-32 -Wno-newline-eof -Wc++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.5 -g -Wno-conversion -Wno-sign-conversion -iquote /projects/multitone/visuals/cinder/xcode/./build/cinder.build/Debug/cinder.build/cinder-generated-files.hmap -I/projects/multitone/visuals/cinder/xcode/./build/cinder.build/Debug/cinder.build/cinder-own-target-headers.hmap -I/projects/multitone/visuals/cinder/xcode/./build/cinder.build/Debug/cinder.build/cinder-all-target-headers.hmap -iquote /projects/multitone/visuals/cinder/xcode/./build/cinder.build/Debug/cinder.build/cinder-project-headers.hmap -iquote../../../../../usr/local/cinder_0.8.4_mac/include -iquote../../../../../usr/local/cinder_0.8.4_mac/blocks/osc/include -I/projects/multitone/visuals/cinder/xcode/build/Debug/include -I../../../../../usr/local/cinder_0.8.4_mac/boost -I/projects/multitone/visuals/cinder/xcode/./build/cinder.build/Debug/cinder.build/DerivedSources/i386 -I/projects/multitone/visuals/cinder/xcode/./build/cinder.build/Debug/cinder.build/DerivedSources -F/projects/multitone/visuals/cinder/xcode/build/Debug -include /var/folders/p_/cfdnrzbd7xg44sy7_j83w4sr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/cinder_Prefix-blqrhdehcgviepeobwtjlxsezvmk/cinder_Prefix.pch -MMD -MT dependencies -MF /projects/multitone/visuals/cinder/xcode/./build/cinder.build/Debug/cinder.build/Objects-normal/i386/OscMessage.d --serialize-diagnostics /projects/multitone/visuals/cinder/xcode/./build/cinder.build/Debug/cinder.build/Objects-normal/i386/OscMessage.dia -c /usr/local/cinder_0.8.4_mac/blocks/osc/src/OscMessage.cpp -o /projects/multitone/visuals/cinder/xcode/./build/cinder.build/Debug/cinder.build/Objects-normal/i386/OscMessage.o36"C982B9DB-3325-4725-A516-D28BE257237A-
-
-CCompileC ./build/cinder.build/Debug/cinder.build/Objects-normal/i386/OscSender.o /usr/local/cinder_0.8.4_mac/blocks/osc/src/OscSender.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s364610538.764988
-e364610540.189998
-r1
-xCompileC
-x./build/cinder.build/Debug/cinder.build/Objects-normal/i386/OscSender.o
-x/usr/local/cinder_0.8.4_mac/blocks/osc/src/OscSender.cpp
-xnormal
-xi386
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection64"Compile /usr/local/cinder_0.8.4_mac/blocks/osc/src/OscSender.cpp77f8c3ea83bbb541^f9a330ec83bbb541^---0#0#0#-19%DVTDocumentLocation2@72"file://localhost/usr/local/cinder_0.8.4_mac/blocks/osc/src/OscSender.cpp0000000000000000^2696"CompileC ./build/cinder.build/Debug/cinder.build/Objects-normal/i386/OscSender.o /usr/local/cinder_0.8.4_mac/blocks/osc/src/OscSender.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /projects/multitone/visuals/cinder/xcode    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-sign-compare -Wno-shorten-64-to-32 -Wno-newline-eof -Wc++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.5 -g -Wno-conversion -Wno-sign-conversion -iquote /projects/multitone/visuals/cinder/xcode/./build/cinder.build/Debug/cinder.build/cinder-generated-files.hmap -I/projects/multitone/visuals/cinder/xcode/./build/cinder.build/Debug/cinder.build/cinder-own-target-headers.hmap -I/projects/multitone/visuals/cinder/xcode/./build/cinder.build/Debug/cinder.build/cinder-all-target-headers.hmap -iquote /projects/multitone/visuals/cinder/xcode/./build/cinder.build/Debug/cinder.build/cinder-project-headers.hmap -iquote../../../../../usr/local/cinder_0.8.4_mac/include -iquote../../../../../usr/local/cinder_0.8.4_mac/blocks/osc/include -I/projects/multitone/visuals/cinder/xcode/build/Debug/include -I../../../../../usr/local/cinder_0.8.4_mac/boost -I/projects/multitone/visuals/cinder/xcode/./build/cinder.build/Debug/cinder.build/DerivedSources/i386 -I/projects/multitone/visuals/cinder/xcode/./build/cinder.build/Debug/cinder.build/DerivedSources -F/projects/multitone/visuals/cinder/xcode/build/Debug -include /var/folders/p_/cfdnrzbd7xg44sy7_j83w4sr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/cinder_Prefix-blqrhdehcgviepeobwtjlxsezvmk/cinder_Prefix.pch -MMD -MT dependencies -MF /projects/multitone/visuals/cinder/xcode/./build/cinder.build/Debug/cinder.build/Objects-normal/i386/OscSender.d --serialize-diagnostics /projects/multitone/visuals/cinder/xcode/./build/cinder.build/Debug/cinder.build/Objects-normal/i386/OscSender.dia -c /usr/local/cinder_0.8.4_mac/blocks/osc/src/OscSender.cpp -o /projects/multitone/visuals/cinder/xcode/./build/cinder.build/Debug/cinder.build/Objects-normal/i386/OscSender.o36"F980B089-B32F-4B4B-BFCA-B3F3308421EA-
-
-CCompileC ./build/cinder.build/Debug/cinder.build/Objects-normal/i386/cinderApp.o /projects/multitone/visuals/cinder/xcode/../src/cinderApp.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s364610523.976615
-e364610536.477544
-r1
-xCompileC
-x./build/cinder.build/Debug/cinder.build/Objects-normal/i386/cinderApp.o
-x/projects/multitone/visuals/cinder/xcode/../src/cinderApp.cpp
-xnormal
-xi386
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-o/projects/multitone/visuals/cinder/xcode/../src/cinderApp.cpp:55:13: warning: unused variable 'waveform' [-Wunused-variable]
-o        int waveform = msg.getArgAsInt32(3);
-o            ^
-o/projects/multitone/visuals/cinder/xcode/../src/cinderApp.cpp:54:15: warning: unused variable 'reverb' [-Wunused-variable]
-o        float reverb = msg.getArgAsFloat(2);
-o              ^
-o2 warnings generated.
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection69"Compile /projects/multitone/visuals/cinder/xcode/../src/cinderApp.cpp1d22fadb83bbb541^334f7ae883bbb541^-390"/projects/multitone/visuals/cinder/xcode/../src/cinderApp.cpp:55:13: warning: unused variable 'waveform' [-Wunused-variable]        int waveform = msg.getArgAsInt32(3);            ^/projects/multitone/visuals/cinder/xcode/../src/cinderApp.cpp:54:15: warning: unused variable 'reverb' [-Wunused-variable]        float reverb = msg.getArgAsFloat(2);              ^2 warnings generated.2(36%IDEClangDiagnosticActivityLogMessage2@26"Unused variable 'waveform'-364610536#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@68"file://localhost/projects/multitone/visuals/cinder/src/cinderApp.cpp0000000000000000^54#12#54#12#1362#0#19"Unused Entity Issue--2@24"Unused variable 'reverb'-364610536#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic3@68"file://localhost/projects/multitone/visuals/cinder/src/cinderApp.cpp0000000000000000^53#14#53#14#1319#0#19"Unused Entity Issue--0#0#0#-19%DVTDocumentLocation4@77"file://localhost/projects/multitone/visuals/cinder/xcode/../src/cinderApp.cpp0000000000000000^2665"CompileC ./build/cinder.build/Debug/cinder.build/Objects-normal/i386/cinderApp.o ../src/cinderApp.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /projects/multitone/visuals/cinder/xcode    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-sign-compare -Wno-shorten-64-to-32 -Wno-newline-eof -Wc++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.5 -g -Wno-conversion -Wno-sign-conversion -iquote /projects/multitone/visuals/cinder/xcode/./build/cinder.build/Debug/cinder.build/cinder-generated-files.hmap -I/projects/multitone/visuals/cinder/xcode/./build/cinder.build/Debug/cinder.build/cinder-own-target-headers.hmap -I/projects/multitone/visuals/cinder/xcode/./build/cinder.build/Debug/cinder.build/cinder-all-target-headers.hmap -iquote /projects/multitone/visuals/cinder/xcode/./build/cinder.build/Debug/cinder.build/cinder-project-headers.hmap -iquote../../../../../usr/local/cinder_0.8.4_mac/include -iquote../../../../../usr/local/cinder_0.8.4_mac/blocks/osc/include -I/projects/multitone/visuals/cinder/xcode/build/Debug/include -I../../../../../usr/local/cinder_0.8.4_mac/boost -I/projects/multitone/visuals/cinder/xcode/./build/cinder.build/Debug/cinder.build/DerivedSources/i386 -I/projects/multitone/visuals/cinder/xcode/./build/cinder.build/Debug/cinder.build/DerivedSources -F/projects/multitone/visuals/cinder/xcode/build/Debug -include /var/folders/p_/cfdnrzbd7xg44sy7_j83w4sr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/cinder_Prefix-blqrhdehcgviepeobwtjlxsezvmk/cinder_Prefix.pch -MMD -MT dependencies -MF /projects/multitone/visuals/cinder/xcode/./build/cinder.build/Debug/cinder.build/Objects-normal/i386/cinderApp.d --serialize-diagnostics /projects/multitone/visuals/cinder/xcode/./build/cinder.build/Debug/cinder.build/Objects-normal/i386/cinderApp.dia -c /projects/multitone/visuals/cinder/xcode/../src/cinderApp.cpp -o /projects/multitone/visuals/cinder/xcode/./build/cinder.build/Debug/cinder.build/Objects-normal/i386/cinderApp.o36"84B7DE22-D5EE-4A19-A16B-7F28DECDE72D-
-
-CCompileC ./build/cinder.build/Debug/cinder.build/Objects-normal/i386/note.o /projects/multitone/visuals/cinder/xcode/note.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s364610523.975882
-e364610531.076463
-r1
-xCompileC
-x./build/cinder.build/Debug/cinder.build/Objects-normal/i386/note.o
-x/projects/multitone/visuals/cinder/xcode/note.cpp
-xnormal
-xi386
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection57"Compile /projects/multitone/visuals/cinder/xcode/note.cppcbf6f9db83bbb541^a1a113e383bbb541^---0#0#0#-19%DVTDocumentLocation2@65"file://localhost/projects/multitone/visuals/cinder/xcode/note.cpp0000000000000000^2621"CompileC ./build/cinder.build/Debug/cinder.build/Objects-normal/i386/note.o note.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /projects/multitone/visuals/cinder/xcode    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-sign-compare -Wno-shorten-64-to-32 -Wno-newline-eof -Wc++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.5 -g -Wno-conversion -Wno-sign-conversion -iquote /projects/multitone/visuals/cinder/xcode/./build/cinder.build/Debug/cinder.build/cinder-generated-files.hmap -I/projects/multitone/visuals/cinder/xcode/./build/cinder.build/Debug/cinder.build/cinder-own-target-headers.hmap -I/projects/multitone/visuals/cinder/xcode/./build/cinder.build/Debug/cinder.build/cinder-all-target-headers.hmap -iquote /projects/multitone/visuals/cinder/xcode/./build/cinder.build/Debug/cinder.build/cinder-project-headers.hmap -iquote../../../../../usr/local/cinder_0.8.4_mac/include -iquote../../../../../usr/local/cinder_0.8.4_mac/blocks/osc/include -I/projects/multitone/visuals/cinder/xcode/build/Debug/include -I../../../../../usr/local/cinder_0.8.4_mac/boost -I/projects/multitone/visuals/cinder/xcode/./build/cinder.build/Debug/cinder.build/DerivedSources/i386 -I/projects/multitone/visuals/cinder/xcode/./build/cinder.build/Debug/cinder.build/DerivedSources -F/projects/multitone/visuals/cinder/xcode/build/Debug -include /var/folders/p_/cfdnrzbd7xg44sy7_j83w4sr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/cinder_Prefix-blqrhdehcgviepeobwtjlxsezvmk/cinder_Prefix.pch -MMD -MT dependencies -MF /projects/multitone/visuals/cinder/xcode/./build/cinder.build/Debug/cinder.build/Objects-normal/i386/note.d --serialize-diagnostics /projects/multitone/visuals/cinder/xcode/./build/cinder.build/Debug/cinder.build/Objects-normal/i386/note.dia -c /projects/multitone/visuals/cinder/xcode/note.cpp -o /projects/multitone/visuals/cinder/xcode/./build/cinder.build/Debug/cinder.build/Objects-normal/i386/note.o36"103BF73E-152C-43B8-9BFB-3CCD4B3F36CE-
-
-CCpResource CinderApp.icns ./build/Debug/cinder.app/Contents/Resources/CinderApp.icns
-s364610523.887345
-e364610523.894238
-r1
-xCpResource
-xCinderApp.icns
-x./build/Debug/cinder.app/Contents/Resources/CinderApp.icns
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection63"Copy ./build/Debug/cinder.app/Contents/Resources/CinderApp.icns425ae3db83bbb541^d5ede4db83bbb541^---0#0#0#-19%DVTDocumentLocation2@115"file://localhost/projects/multitone/visuals/cinder/xcode/./build/Debug/cinder.app/Contents/Resources/CinderApp.icns000000000080d041^491"CpResource CinderApp.icns ./build/Debug/cinder.app/Contents/Resources/CinderApp.icns    cd /projects/multitone/visuals/cinder/xcode    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip /projects/multitone/visuals/cinder/xcode/CinderApp.icns /projects/multitone/visuals/cinder/xcode/./build/Debug/cinder.app/Contents/Resources36"01953A67-BE66-435F-9DE1-7F380D0C9BC3-
-
-CLd /projects/multitone/visuals/cinder/xcode/./build/Debug/cinder.app/Contents/MacOS/cinder normal i386
-s364610549.071826
-e364610551.686677
-r1
-xLd
-x/projects/multitone/visuals/cinder/xcode/./build/Debug/cinder.app/Contents/MacOS/cinder
-xnormal
-xi386
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection92"Link /projects/multitone/visuals/cinder/xcode/./build/Debug/cinder.app/Contents/MacOS/cinder9a7d12f583bbb541^86caaff783bbb541^---0#0#0#--1332"Ld ./build/Debug/cinder.app/Contents/MacOS/cinder normal i386    cd /projects/multitone/visuals/cinder/xcode    setenv MACOSX_DEPLOYMENT_TARGET 10.5    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -arch i386 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.6.sdk -L/projects/multitone/visuals/cinder/xcode/build/Debug -L/usr/local/cinder_0.8.4_mac/blocks/opencv/lib/ios -L/usr/local/cinder_0.8.4_mac/blocks/opencv/lib/ios-sim -L/usr/local/cinder_0.8.4_mac/blocks/opencv/lib/macosx -L/usr/local/cinder_0.8.4_mac/blocks/osc/lib/iphone -L/usr/local/cinder_0.8.4_mac/blocks/osc/lib/macosx -F/projects/multitone/visuals/cinder/xcode/build/Debug -filelist /projects/multitone/visuals/cinder/xcode/./build/cinder.build/Debug/cinder.build/Objects-normal/i386/cinder.LinkFileList -mmacosx-version-min=10.5 ../../../../../usr/local/cinder_0.8.4_mac/lib/libcinder_d.a ../../../../../usr/local/cinder_0.8.4_mac/blocks/osc/lib/macosx/osc.a -lcurl -framework Cocoa -framework OpenGL -framework Carbon -framework CoreVideo -framework QTKit -framework QuickTime -framework Accelerate -framework AudioToolbox -framework AudioUnit -framework CoreAudio -o /projects/multitone/visuals/cinder/xcode/./build/Debug/cinder.app/Contents/MacOS/cinder36"ED952583-07B6-4770-922E-CB59AA9AA348-
-
-CProcessInfoPlistFile /projects/multitone/visuals/cinder/xcode/./build/Debug/cinder.app/Contents/Info.plist Info.plist
-s364610523.861891
-e364610523.877628
-r1
-xProcessInfoPlistFile
-x/projects/multitone/visuals/cinder/xcode/./build/Debug/cinder.app/Contents/Info.plist
-xInfo.plist
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Process Info.plistdeccdcdb83bbb541^823ae1db83bbb541^---0#0#0#-19%DVTDocumentLocation2@67"file://localhost/projects/multitone/visuals/cinder/xcode/Info.plist0000000000000000^387"ProcessInfoPlistFile ./build/Debug/cinder.app/Contents/Info.plist Info.plist    cd /projects/multitone/visuals/cinder/xcode    builtin-infoPlistUtility Info.plist -genpkginfo /projects/multitone/visuals/cinder/xcode/./build/Debug/cinder.app/Contents/PkgInfo -expandbuildsettings -platform macosx -o /projects/multitone/visuals/cinder/xcode/./build/Debug/cinder.app/Contents/Info.plist36"04F55307-FBE0-4D23-BEC4-620C992450D0-
-
-CProcessPCH++ /Users/jordanorelli/Library/Developer/Xcode/DerivedData/cinder-czvcgayzgpvercdvznsvundghatn/Index/PrecompiledHeaders/cinder_Prefix-dmculmljljrpgqgtaxsmypxutjhp_ast/cinder_Prefix.pch.pth cinder_Prefix.pch normal i386 c++ com.apple.compilers.llvm.clang.1_0.astbuilder
-r0
-
-CProcessPCH++ /var/folders/p_/cfdnrzbd7xg44sy7_j83w4sr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/cinder_Prefix-blqrhdehcgviepeobwtjlxsezvmk/cinder_Prefix.pch.pth cinder_Prefix.pch normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s364610523.904385
-e364610523.968523
-r1
-xProcessPCH++
-x/var/folders/p_/cfdnrzbd7xg44sy7_j83w4sr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/cinder_Prefix-blqrhdehcgviepeobwtjlxsezvmk/cinder_Prefix.pch.pth
-xcinder_Prefix.pch
-xnormal
-xi386
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection28"Precompile cinder_Prefix.pch93a8e7db83bbb541^b401f8db83bbb541^---0#0#0#-19%DVTDocumentLocation2@74"file://localhost/projects/multitone/visuals/cinder/xcode/cinder_Prefix.pch0000000000000000^2727"ProcessPCH++ /var/folders/p_/cfdnrzbd7xg44sy7_j83w4sr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/cinder_Prefix-blqrhdehcgviepeobwtjlxsezvmk/cinder_Prefix.pch.pth cinder_Prefix.pch normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /projects/multitone/visuals/cinder/xcode    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++-header -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-sign-compare -Wno-shorten-64-to-32 -Wno-newline-eof -Wc++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.5 -g -Wno-conversion -Wno-sign-conversion -iquote /projects/multitone/visuals/cinder/xcode/./build/cinder.build/Debug/cinder.build/cinder-generated-files.hmap -I/projects/multitone/visuals/cinder/xcode/./build/cinder.build/Debug/cinder.build/cinder-own-target-headers.hmap -I/projects/multitone/visuals/cinder/xcode/./build/cinder.build/Debug/cinder.build/cinder-all-target-headers.hmap -iquote /projects/multitone/visuals/cinder/xcode/./build/cinder.build/Debug/cinder.build/cinder-project-headers.hmap -iquote../../../../../usr/local/cinder_0.8.4_mac/include -iquote../../../../../usr/local/cinder_0.8.4_mac/blocks/osc/include -I/projects/multitone/visuals/cinder/xcode/build/Debug/include -I../../../../../usr/local/cinder_0.8.4_mac/boost -I/projects/multitone/visuals/cinder/xcode/./build/cinder.build/Debug/cinder.build/DerivedSources/i386 -I/projects/multitone/visuals/cinder/xcode/./build/cinder.build/Debug/cinder.build/DerivedSources -F/projects/multitone/visuals/cinder/xcode/build/Debug --serialize-diagnostics /var/folders/p_/cfdnrzbd7xg44sy7_j83w4sr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/cinder_Prefix-blqrhdehcgviepeobwtjlxsezvmk/cinder_Prefix.pch.dia -c /projects/multitone/visuals/cinder/xcode/cinder_Prefix.pch -o /var/folders/p_/cfdnrzbd7xg44sy7_j83w4sr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/cinder_Prefix-blqrhdehcgviepeobwtjlxsezvmk/cinder_Prefix.pch.pth -MMD -MT dependencies -MF /var/folders/p_/cfdnrzbd7xg44sy7_j83w4sr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/cinder_Prefix-blqrhdehcgviepeobwtjlxsezvmk/cinder_Prefix.pch.d36"29CAC6AA-933B-49D7-83CA-A6BC80CBD930-
-
-CTouch /projects/multitone/visuals/cinder/xcode/./build/Debug/cinder.app
-s364610551.695528
-e364610551.707090
-r1
-xTouch
-x/projects/multitone/visuals/cinder/xcode/./build/Debug/cinder.app
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection71"Touch /projects/multitone/visuals/cinder/xcode/./build/Debug/cinder.app6d1fb2f783bbb541^dc0eb5f783bbb541^---0#0#0#--167"Touch ./build/Debug/cinder.app    cd /projects/multitone/visuals/cinder/xcode    /usr/bin/touch -c /projects/multitone/visuals/cinder/xcode/./build/Debug/cinder.app36"D4CCE3D1-EA68-48AD-BD47-7958C15EDC57-
-

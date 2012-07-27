@@ -41,7 +41,7 @@ class Tick
     noFill();
     stroke(255, map(this.age, 0, this.maxAge, 255, 0));
     strokeWeight(this.age);
-    this.d = this.age * this.maxAge;
+    this.d = 40 * this.maxAge * pow(norm(this.age, 0, this.maxAge), 3);    
     ellipse(this.x, this.y, this.d, this.d);
   }
 

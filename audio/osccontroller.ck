@@ -11,7 +11,7 @@ fun float getFreq(float norm) {
 
 fun float getFreqChromatic(float norm) {
     Math.pow(2, 1.0/12.0) => float toneStep;
-    110.0 => float minFreq;
+    220.0 => float minFreq;
     (Math.floor(norm * 48.0)) $ int => int i;
     minFreq * Math.pow(toneStep, i) => float f;;
     return f;
@@ -81,7 +81,7 @@ class XYVoice
     fun void init(OscRecv in, int _id) {
         1 => waveType;
         new SinOsc @=> osc => env;;
-        0.6 => osc.gain;
+        0.7 => osc.gain;
         in @=> recv;
         _id => id;
         100::ms => beat;
@@ -109,7 +109,7 @@ class XYVoice
         //abs(y) => osc.freq;
         getFreq(y) => osc.freq;
         env.keyOn();
-        beat * 0.4 => now;
+        beat * 0.8 => now;
         env.keyOff();
         x => out.addFloat;
         y => out.addFloat;
@@ -155,6 +155,7 @@ class XYVoice
             <<< "TRI" >>>;
             new TriOsc @=> osc => env;
         }
+        0.7 => osc.gain;
     }
 }
 
