@@ -109,14 +109,14 @@ class XYVoice
         //abs(y) => osc.freq;
         getFreq(y) => osc.freq;
         env.keyOn();
-        beat * 0.8 => now;
-        env.keyOff();
         x => out.addFloat;
         y => out.addFloat;
         rev.mix() => out.addFloat;
         waveType => out.addInt;
         out.startMsg("/voice/" + id, "fffi");
         <<< "SEND", "/voice/" + id, x, y >>>;
+        beat * 0.8 => now;
+        env.keyOff();
     }
 
     // function listen is responsible for listening for incoming OSC messages
