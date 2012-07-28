@@ -1,5 +1,7 @@
 Multitone is an experimental sound toy.  It is controlled with an iPad, but the sound synthesis and the graphics run on a computer. 
 
+Demo video: https://vimeo.com/46550447
+
 # Architecture
 
 The iPad formats user input into OSC messages and sends them to the computer at a predefined UDP port (in this application, it's 9000).
