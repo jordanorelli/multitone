@@ -1,0 +1,410 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D3623260D0F684500981E51 /* OSCDemoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* OSCDemoAppDelegate.m */; };
+		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
+		28D7ACF80DDB3853001CB0EB /* OSCDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* OSCDemoViewController.m */; };
+		56B13B481172F20500E1BC38 /* MutLockArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B13B371172F20500E1BC38 /* MutLockArray.m */; };
+		56B13B491172F20500E1BC38 /* MutLockDict.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B13B391172F20500E1BC38 /* MutLockDict.m */; };
+		56B13B4A1172F20500E1BC38 /* MutNRLockArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B13B3B1172F20500E1BC38 /* MutNRLockArray.m */; };
+		56B13B4B1172F20500E1BC38 /* MutNRLockDict.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B13B3D1172F20500E1BC38 /* MutNRLockDict.m */; };
+		56B13B4C1172F20500E1BC38 /* NamedMutLockArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B13B3F1172F20500E1BC38 /* NamedMutLockArray.m */; };
+		56B13B4D1172F20500E1BC38 /* ObjectHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B13B411172F20500E1BC38 /* ObjectHolder.m */; };
+		56B13B4E1172F20500E1BC38 /* VVStopwatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B13B441172F20500E1BC38 /* VVStopwatch.m */; };
+		56B13B4F1172F20500E1BC38 /* VVThreadLoop.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B13B461172F20500E1BC38 /* VVThreadLoop.m */; };
+		56B13B6C1172F21000E1BC38 /* OSCAddressSpace.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B13B531172F21000E1BC38 /* OSCAddressSpace.m */; };
+		56B13B6D1172F21000E1BC38 /* OSCBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B13B551172F21000E1BC38 /* OSCBundle.m */; };
+		56B13B6E1172F21000E1BC38 /* OSCInPort.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B13B581172F21000E1BC38 /* OSCInPort.m */; };
+		56B13B6F1172F21000E1BC38 /* OSCManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B13B5A1172F21000E1BC38 /* OSCManager.m */; };
+		56B13B701172F21000E1BC38 /* OSCMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B13B5C1172F21000E1BC38 /* OSCMessage.m */; };
+		56B13B711172F21000E1BC38 /* OSCNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B13B5E1172F21000E1BC38 /* OSCNode.m */; };
+		56B13B721172F21000E1BC38 /* OSCOutPort.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B13B601172F21000E1BC38 /* OSCOutPort.m */; };
+		56B13B731172F21000E1BC38 /* OSCPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B13B621172F21000E1BC38 /* OSCPacket.m */; };
+		56B13B741172F21000E1BC38 /* OSCStringAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B13B641172F21000E1BC38 /* OSCStringAdditions.m */; };
+		56B13B751172F21000E1BC38 /* OSCValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B13B661172F21000E1BC38 /* OSCValue.m */; };
+		56B13B761172F21000E1BC38 /* OSCZeroConfDomain.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B13B681172F21000E1BC38 /* OSCZeroConfDomain.m */; };
+		56B13B771172F21000E1BC38 /* OSCZeroConfManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B13B6A1172F21000E1BC38 /* OSCZeroConfManager.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D3623240D0F684500981E51 /* OSCDemoAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSCDemoAppDelegate.h; sourceTree = "<group>"; };
+		1D3623250D0F684500981E51 /* OSCDemoAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSCDemoAppDelegate.m; sourceTree = "<group>"; };
+		1D6058910D05DD3D006BFB54 /* OSCDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OSCDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		28D7ACF60DDB3853001CB0EB /* OSCDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSCDemoViewController.h; sourceTree = "<group>"; };
+		28D7ACF70DDB3853001CB0EB /* OSCDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSCDemoViewController.m; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		32CA4F630368D1EE00C91783 /* OSCDemo_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSCDemo_Prefix.pch; sourceTree = "<group>"; };
+		56B13B361172F20500E1BC38 /* MutLockArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MutLockArray.h; sourceTree = "<group>"; };
+		56B13B371172F20500E1BC38 /* MutLockArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MutLockArray.m; sourceTree = "<group>"; };
+		56B13B381172F20500E1BC38 /* MutLockDict.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MutLockDict.h; sourceTree = "<group>"; };
+		56B13B391172F20500E1BC38 /* MutLockDict.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MutLockDict.m; sourceTree = "<group>"; };
+		56B13B3A1172F20500E1BC38 /* MutNRLockArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MutNRLockArray.h; sourceTree = "<group>"; };
+		56B13B3B1172F20500E1BC38 /* MutNRLockArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MutNRLockArray.m; sourceTree = "<group>"; };
+		56B13B3C1172F20500E1BC38 /* MutNRLockDict.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MutNRLockDict.h; sourceTree = "<group>"; };
+		56B13B3D1172F20500E1BC38 /* MutNRLockDict.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MutNRLockDict.m; sourceTree = "<group>"; };
+		56B13B3E1172F20500E1BC38 /* NamedMutLockArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NamedMutLockArray.h; sourceTree = "<group>"; };
+		56B13B3F1172F20500E1BC38 /* NamedMutLockArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NamedMutLockArray.m; sourceTree = "<group>"; };
+		56B13B401172F20500E1BC38 /* ObjectHolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectHolder.h; sourceTree = "<group>"; };
+		56B13B411172F20500E1BC38 /* ObjectHolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectHolder.m; sourceTree = "<group>"; };
+		56B13B421172F20500E1BC38 /* VVBasicMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VVBasicMacros.h; sourceTree = "<group>"; };
+		56B13B431172F20500E1BC38 /* VVStopwatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VVStopwatch.h; sourceTree = "<group>"; };
+		56B13B441172F20500E1BC38 /* VVStopwatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VVStopwatch.m; sourceTree = "<group>"; };
+		56B13B451172F20500E1BC38 /* VVThreadLoop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VVThreadLoop.h; sourceTree = "<group>"; };
+		56B13B461172F20500E1BC38 /* VVThreadLoop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VVThreadLoop.m; sourceTree = "<group>"; };
+		56B13B471172F20500E1BC38 /* VVBasics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VVBasics.h; sourceTree = "<group>"; };
+		56B13B521172F21000E1BC38 /* OSCAddressSpace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSCAddressSpace.h; sourceTree = "<group>"; };
+		56B13B531172F21000E1BC38 /* OSCAddressSpace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSCAddressSpace.m; sourceTree = "<group>"; };
+		56B13B541172F21000E1BC38 /* OSCBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSCBundle.h; sourceTree = "<group>"; };
+		56B13B551172F21000E1BC38 /* OSCBundle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSCBundle.m; sourceTree = "<group>"; };
+		56B13B561172F21000E1BC38 /* OSCConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSCConstants.h; sourceTree = "<group>"; };
+		56B13B571172F21000E1BC38 /* OSCInPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSCInPort.h; sourceTree = "<group>"; };
+		56B13B581172F21000E1BC38 /* OSCInPort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSCInPort.m; sourceTree = "<group>"; };
+		56B13B591172F21000E1BC38 /* OSCManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSCManager.h; sourceTree = "<group>"; };
+		56B13B5A1172F21000E1BC38 /* OSCManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSCManager.m; sourceTree = "<group>"; };
+		56B13B5B1172F21000E1BC38 /* OSCMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSCMessage.h; sourceTree = "<group>"; };
+		56B13B5C1172F21000E1BC38 /* OSCMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSCMessage.m; sourceTree = "<group>"; };
+		56B13B5D1172F21000E1BC38 /* OSCNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSCNode.h; sourceTree = "<group>"; };
+		56B13B5E1172F21000E1BC38 /* OSCNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSCNode.m; sourceTree = "<group>"; };
+		56B13B5F1172F21000E1BC38 /* OSCOutPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSCOutPort.h; sourceTree = "<group>"; };
+		56B13B601172F21000E1BC38 /* OSCOutPort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSCOutPort.m; sourceTree = "<group>"; };
+		56B13B611172F21000E1BC38 /* OSCPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSCPacket.h; sourceTree = "<group>"; };
+		56B13B621172F21000E1BC38 /* OSCPacket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSCPacket.m; sourceTree = "<group>"; };
+		56B13B631172F21000E1BC38 /* OSCStringAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSCStringAdditions.h; sourceTree = "<group>"; };
+		56B13B641172F21000E1BC38 /* OSCStringAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSCStringAdditions.m; sourceTree = "<group>"; };
+		56B13B651172F21000E1BC38 /* OSCValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSCValue.h; sourceTree = "<group>"; };
+		56B13B661172F21000E1BC38 /* OSCValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSCValue.m; sourceTree = "<group>"; };
+		56B13B671172F21000E1BC38 /* OSCZeroConfDomain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSCZeroConfDomain.h; sourceTree = "<group>"; };
+		56B13B681172F21000E1BC38 /* OSCZeroConfDomain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSCZeroConfDomain.m; sourceTree = "<group>"; };
+		56B13B691172F21000E1BC38 /* OSCZeroConfManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSCZeroConfManager.h; sourceTree = "<group>"; };
+		56B13B6A1172F21000E1BC38 /* OSCZeroConfManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSCZeroConfManager.m; sourceTree = "<group>"; };
+		56B13B6B1172F21000E1BC38 /* VVOSC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VVOSC.h; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* OSCDemo-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "OSCDemo-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1D3623240D0F684500981E51 /* OSCDemoAppDelegate.h */,
+				1D3623250D0F684500981E51 /* OSCDemoAppDelegate.m */,
+				28D7ACF60DDB3853001CB0EB /* OSCDemoViewController.h */,
+				28D7ACF70DDB3853001CB0EB /* OSCDemoViewController.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* OSCDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* OSCDemo_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+				56B13B501172F21000E1BC38 /* VVOSC */,
+				56B13B341172F20500E1BC38 /* VVBasics */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107310486CEB800E47090 /* OSCDemo-Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				288765A40DF7441C002DB57D /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		56B13B341172F20500E1BC38 /* VVBasics */ = {
+			isa = PBXGroup;
+			children = (
+				56B13B351172F20500E1BC38 /* src */,
+				56B13B471172F20500E1BC38 /* VVBasics.h */,
+			);
+			path = VVBasics;
+			sourceTree = "<group>";
+		};
+		56B13B351172F20500E1BC38 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				56B13B361172F20500E1BC38 /* MutLockArray.h */,
+				56B13B371172F20500E1BC38 /* MutLockArray.m */,
+				56B13B381172F20500E1BC38 /* MutLockDict.h */,
+				56B13B391172F20500E1BC38 /* MutLockDict.m */,
+				56B13B3A1172F20500E1BC38 /* MutNRLockArray.h */,
+				56B13B3B1172F20500E1BC38 /* MutNRLockArray.m */,
+				56B13B3C1172F20500E1BC38 /* MutNRLockDict.h */,
+				56B13B3D1172F20500E1BC38 /* MutNRLockDict.m */,
+				56B13B3E1172F20500E1BC38 /* NamedMutLockArray.h */,
+				56B13B3F1172F20500E1BC38 /* NamedMutLockArray.m */,
+				56B13B401172F20500E1BC38 /* ObjectHolder.h */,
+				56B13B411172F20500E1BC38 /* ObjectHolder.m */,
+				56B13B421172F20500E1BC38 /* VVBasicMacros.h */,
+				56B13B431172F20500E1BC38 /* VVStopwatch.h */,
+				56B13B441172F20500E1BC38 /* VVStopwatch.m */,
+				56B13B451172F20500E1BC38 /* VVThreadLoop.h */,
+				56B13B461172F20500E1BC38 /* VVThreadLoop.m */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		56B13B501172F21000E1BC38 /* VVOSC */ = {
+			isa = PBXGroup;
+			children = (
+				56B13B511172F21000E1BC38 /* FrameworkSrc */,
+				56B13B6B1172F21000E1BC38 /* VVOSC.h */,
+			);
+			path = VVOSC;
+			sourceTree = "<group>";
+		};
+		56B13B511172F21000E1BC38 /* FrameworkSrc */ = {
+			isa = PBXGroup;
+			children = (
+				56B13B521172F21000E1BC38 /* OSCAddressSpace.h */,
+				56B13B531172F21000E1BC38 /* OSCAddressSpace.m */,
+				56B13B541172F21000E1BC38 /* OSCBundle.h */,
+				56B13B551172F21000E1BC38 /* OSCBundle.m */,
+				56B13B561172F21000E1BC38 /* OSCConstants.h */,
+				56B13B571172F21000E1BC38 /* OSCInPort.h */,
+				56B13B581172F21000E1BC38 /* OSCInPort.m */,
+				56B13B591172F21000E1BC38 /* OSCManager.h */,
+				56B13B5A1172F21000E1BC38 /* OSCManager.m */,
+				56B13B5B1172F21000E1BC38 /* OSCMessage.h */,
+				56B13B5C1172F21000E1BC38 /* OSCMessage.m */,
+				56B13B5D1172F21000E1BC38 /* OSCNode.h */,
+				56B13B5E1172F21000E1BC38 /* OSCNode.m */,
+				56B13B5F1172F21000E1BC38 /* OSCOutPort.h */,
+				56B13B601172F21000E1BC38 /* OSCOutPort.m */,
+				56B13B611172F21000E1BC38 /* OSCPacket.h */,
+				56B13B621172F21000E1BC38 /* OSCPacket.m */,
+				56B13B631172F21000E1BC38 /* OSCStringAdditions.h */,
+				56B13B641172F21000E1BC38 /* OSCStringAdditions.m */,
+				56B13B651172F21000E1BC38 /* OSCValue.h */,
+				56B13B661172F21000E1BC38 /* OSCValue.m */,
+				56B13B671172F21000E1BC38 /* OSCZeroConfDomain.h */,
+				56B13B681172F21000E1BC38 /* OSCZeroConfDomain.m */,
+				56B13B691172F21000E1BC38 /* OSCZeroConfManager.h */,
+				56B13B6A1172F21000E1BC38 /* OSCZeroConfManager.m */,
+			);
+			path = FrameworkSrc;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* OSCDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "OSCDemo" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OSCDemo;
+			productName = OSCDemo;
+			productReference = 1D6058910D05DD3D006BFB54 /* OSCDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "OSCDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* OSCDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				1D3623260D0F684500981E51 /* OSCDemoAppDelegate.m in Sources */,
+				28D7ACF80DDB3853001CB0EB /* OSCDemoViewController.m in Sources */,
+				56B13B481172F20500E1BC38 /* MutLockArray.m in Sources */,
+				56B13B491172F20500E1BC38 /* MutLockDict.m in Sources */,
+				56B13B4A1172F20500E1BC38 /* MutNRLockArray.m in Sources */,
+				56B13B4B1172F20500E1BC38 /* MutNRLockDict.m in Sources */,
+				56B13B4C1172F20500E1BC38 /* NamedMutLockArray.m in Sources */,
+				56B13B4D1172F20500E1BC38 /* ObjectHolder.m in Sources */,
+				56B13B4E1172F20500E1BC38 /* VVStopwatch.m in Sources */,
+				56B13B4F1172F20500E1BC38 /* VVThreadLoop.m in Sources */,
+				56B13B6C1172F21000E1BC38 /* OSCAddressSpace.m in Sources */,
+				56B13B6D1172F21000E1BC38 /* OSCBundle.m in Sources */,
+				56B13B6E1172F21000E1BC38 /* OSCInPort.m in Sources */,
+				56B13B6F1172F21000E1BC38 /* OSCManager.m in Sources */,
+				56B13B701172F21000E1BC38 /* OSCMessage.m in Sources */,
+				56B13B711172F21000E1BC38 /* OSCNode.m in Sources */,
+				56B13B721172F21000E1BC38 /* OSCOutPort.m in Sources */,
+				56B13B731172F21000E1BC38 /* OSCPacket.m in Sources */,
+				56B13B741172F21000E1BC38 /* OSCStringAdditions.m in Sources */,
+				56B13B751172F21000E1BC38 /* OSCValue.m in Sources */,
+				56B13B761172F21000E1BC38 /* OSCZeroConfDomain.m in Sources */,
+				56B13B771172F21000E1BC38 /* OSCZeroConfManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = OSCDemo_Prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "OSCDemo-Info.plist";
+				PRODUCT_NAME = OSCDemo;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = OSCDemo_Prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "OSCDemo-Info.plist";
+				PRODUCT_NAME = OSCDemo;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "OSCDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "OSCDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
