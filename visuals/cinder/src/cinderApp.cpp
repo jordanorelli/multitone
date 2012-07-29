@@ -25,12 +25,13 @@ class cinderApp : public AppBasic {
 };
 
 void cinderApp::prepareSettings(Settings *settings) {
-    settings->setWindowSize(1340, 900);
+    // settings->setWindowSize(1340, 900);
+    settings->setWindowSize(1024, 768);
     settings->setFrameRate(60.0f);
 }
 
 void cinderApp::setup() {
-    //app::setFullScreen(true);
+    app::setFullScreen(true);
     gl::enableAlphaBlending();
     glEnableClientState( GL_VERTEX_ARRAY );
     glLineWidth(10);
