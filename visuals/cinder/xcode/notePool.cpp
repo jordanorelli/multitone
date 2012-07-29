@@ -10,40 +10,26 @@
 #include "NotePool.h"
 #define POOL_SIZE 5000
 
-NotePool::NotePool() {
-    notes = new Note[POOL_SIZE];
-}
-
-Note * NotePool::getNote() {
-    for(int i = 0; i < POOL_SIZE; i++) {
-        if(notes[i].inPool) {
-            notes[i].inPool = false;
-            return &notes[i];
-        }
-    }
-    throw(2398); // what the fuck, c++
-}
-
-void NotePool::putNote(Note * note) {
-    for(int i = 0; i < POOL_SIZE; i++) {
-        if(&notes[i] == note) {
-            notes[i].inPool = true;
-        }
-    }
+NotePool::NotePool(ci::gl::GlslProg _shader) {
+    shader = _shader;
 }
 
 void NotePool::update() {
-    for(int i = 0; i < POOL_SIZE; i++) {
-        if(!notes[i].inPool) {
-            notes[i].update();
+    for( list<Note>::iterator it = notes.begin(); it != notes.end(); ++it ) {
+        if(it->is_dead) {
+            it = notes.erase(it);
+            continue;
         }
+        it->update();
     }
 }
 
 void NotePool::draw() {
-    for(int i = 0; i < POOL_SIZE; i++) {
-        if(!notes[i].inPool) {
-            notes[i].draw();
-        }
+    for( list<Note>::iterator it = notes.begin(); it != notes.end(); ++it ) {
+        it->draw();
     }
+}
+
+void NotePool::addNote(float x, float y, float reverb) {
+    notes.push_back(Note(x, y, reverb, shader));
 }

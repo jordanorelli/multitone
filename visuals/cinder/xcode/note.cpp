@@ -15,41 +15,26 @@
 using namespace ci;
 using namespace ci::app;
 
-GLfloat * Note::verts = new float[NUM_VERTS];
-
-Note::Note() {
-    pos = Vec2f(0, 0);
-    age = 0;
-    inPool = true;
-}
-
-void Note::init(float x, float y, float ageNorm) {
+Note::Note(float x, float y, float age_norm, gl::GlslProg _shader) {
+    shader = _shader;
     pos = Vec2f(x, y);
     age = 0;
-    // norm * diff + min
-    maxAge = ageNorm * (250 - 40) + 40;
-    maxRadius = ageNorm * (600 - 60) + 60;
-    fadeEx = ageNorm * 3 + 1;
-}
-
-void Note::draw() {
-    this->drawCircle();
-}
-
-void Note::drawCircle() {
-    gl::color(ColorA8u(255, 0, 0, 255 * 0.75 * pow(1 - ((float)this->age / this->maxAge), this->fadeEx)));
-    float radius = this->maxRadius * pow((float)this->age / this->maxAge, 1.4) + 5.0;
-    glPushMatrix();
-    glTranslatef(this->pos.x, this->pos.y, 0);
-    glScalef(radius, radius, 1);
-    glDrawArrays( GL_LINE_LOOP, 0, NUM_SEGMENTS );
-    glPopMatrix();   
+    max_age = age_norm * (250 - 40) + 40;
+    max_radius = age_norm * (600 - 60) + 60;
+    fade_ex = age_norm * 3 + 1;
+    is_dead = false;
 }
 
 void Note::update() {
-    if(this->age >= this->maxAge) {
-        this->age = 0;
-        this->inPool = true;
+    alpha = 0.75 * pow(1 - ((float)age / max_age), fade_ex);
+    radius = max_radius * pow((float)age / max_age, 1.4) + 5.0;
+    age++;
+    if(age >= max_age) {
+        is_dead = true;
     }
-    this->age++;
+}
+
+void Note::draw() {
+    shader.uniform("alpha", alpha);
+    gl::drawSolidRect(Rectf(pos.x - radius, pos.y - radius, pos.x + radius, pos.y + radius));
 }

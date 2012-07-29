@@ -10,20 +10,20 @@
 #define cinder_NotePool_h
 
 #include "note.h"
+#include "cinder/gl/GlslProg.h"
 #include <list>
 
 using namespace std;
 
 class NotePool {
 public:
-    NotePool();
-    Note * getNote();
-    void putNote(Note *);
+    NotePool(ci::gl::GlslProg);
+    void addNote(float x, float y, float reverb); // adds note objects to our pool
     void update();
     void draw();
 private:
-    Note * notes;
+    std::list<Note> notes;
+    ci::gl::GlslProg shader;
 };
-
 
 #endif

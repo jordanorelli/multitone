@@ -10,6 +10,8 @@
 #define cinder_note_h
 #include "cinder/Vector.h"
 #include "cinder/gl/gl.h"
+#include "cinder/gl/GlslProg.h"
+
 #include "cinder/cairo/Cairo.h"
 
 #define NUM_SEGMENTS 200
@@ -17,25 +19,21 @@
 
 class Note {
 public:
-    static GLfloat * verts;
-    Note();
-    void init(float, float, float);
+    Note(float, float, float, ci::gl::GlslProg);
     void update();
     void draw();
 
     ci::Vec2f pos;
     int age;
-    int maxAge;
-    float maxRadius;
-    float fadeEx;
-    bool inPool;
+    int max_age;
+    float max_radius;
+    float fade_ex;
+    float alpha;
+    float radius;
+    bool is_dead;
 
 private:
-    void drawCircle();
-    void drawTriangle();
-    void drawTorus();
-    
-    
+    ci::gl::GlslProg shader;    
 };
 
 
